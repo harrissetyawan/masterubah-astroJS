@@ -1,0 +1,25 @@
+---
+export interface Props {
+  title: string;
+  body: string;
+  href: string;
+	src: string;
+	alt: string;
+}
+
+const { href, title, body, src, alt} = Astro.props;
+---
+
+<li class="bg-gradient-to-r from-orange-400 to-rose-400 rounded-3xl text-5xl p-5 shadow-lg w-max">
+	<a href={href} class="font-extrabold text-zinc-700 shadow-sm flex flex-col items-center">
+		<img src={src} alt={alt} class="h-max w-[10rem] mb-5">
+		<h2 class="">
+			{title}
+			<span>
+			</span>
+		</h2>
+		<p class="font-light text-white shadow-sm text-4xl">
+			{body}
+		</p>
+	</a>
+</li>
