@@ -16,17 +16,46 @@
 </svg>
 </div>
 
-<div id="menu" class="">
-<svg xmlns="http://www.w3.org/2000/svg" height="5.5rem" width="5.5rem">
-  <path d="M6 36v-3h36v3Zm0-10.5v-3h36v3ZM6 15v-3h36v3Z"/>
-</svg>
-</div>
-<!-- <ul id="links" class="list-none flex flex-col">
-  <li class="">
-    <a href="" class="font-bold text-base tracking-wide">
-      Tentang Kami
-    </a>
-  </li>
-</ul> -->
-
+<button type="button" id="menuBtn">
+  <svg xmlns="http://www.w3.org/2000/svg" height="5.5rem" width="5.5rem">
+    <path d="M6 36v-3h36v3Zm0-10.5v-3h36v3ZM6 15v-3h36v3Z"/>
+  </svg>
+</button>
 </nav>
+
+
+  <div class="hidden" id="menu" >
+  <ul id="links" class="list-none flex flex-col absolute right-[11%] z-50 bg-slate-300 text-slate-900 px-20 py-10 rounded-xl gap-10 drop-shadow-xl text-center">
+    <li class="">
+      <a href="" class="font-bold text-4xl tracking-wide">
+        Tentang Kami
+      </a>
+    </li>
+    <li class="">
+      <a href="" class="font-bold text-4xl tracking-wide">
+        Tutorial
+      </a>
+    </li>
+    <li class="">
+      <a href="" class="font-bold text-4xl tracking-wide">
+        Dukung Kami
+      </a>
+    </li>
+    <li class="">
+      <a href="" class="font-bold text-4xl tracking-wide">
+        Kritik & Saran
+      </a>
+    </li>
+  </ul>
+  </div>
+
+  <script>
+
+    const menuBtn = document.getElementById("menuBtn");
+
+    function showMenu() {
+      document.getElementById("menu").classList.toggle("hidden");
+    }
+
+    menuBtn.addEventListener("click", showMenu);
+  </script>
